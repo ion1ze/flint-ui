@@ -1,6 +1,5 @@
 import resolve from '@rollup/plugin-node-resolve';
 import postcss from 'rollup-plugin-postcss';
-import path from 'path';
 
 export default {
   input:'src/index.js',
