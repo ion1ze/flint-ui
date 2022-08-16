@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flint UI</title>
   <style>
+    #app {
+      height: 100vh;
+    }
     .logo span{
       font-size: 28px;
     }
@@ -13,19 +16,36 @@
 </head>
 <body>
   <div id="app">
-    <section class="f-layout">
-      <header class="f-layout-header">
+    <section class="flint-layout">
+      <header class="flint-layout-header">
         <div class="logo">
           <span class="title">Flint UI</span>
         </div>
       </header>
-      <main class="f-layout-main">
+      <main class="flint-layout-main">
         <div class="buttons">
-          <button class="f-button">默认按钮</button>
+          <button class="flint-button" onclick="success()">成功按钮</button>
+          <button class="flint-button" onclick="error()">失败按钮</button>
+          <button class="flint-button" onclick="info()">信息按钮</button>
+          <button class="flint-button" onclick="warn()">警告按钮</button>
         </div>
       </main>
     </section>
   </div>
   <script type="module" src="./src/index.js"></script>
+  <script>
+    function success(){
+      $flint.message.success('这是一条成功信息');
+    }
+    function error(){
+      $flint.message.error('这是一条失败信息');
+    }
+    function info(){
+      $flint.message.info('这是一条提示信息');
+    }
+    function warn(){
+      $flint.message.warn('这是一条警告信息');
+    }
+  </script>
 </body>
 </html>

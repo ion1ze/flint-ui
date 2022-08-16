@@ -1,0 +1,53 @@
+.flint-messages {
+  position: fixed;
+  top: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+
+  .flint-message {
+    background-color: #f0f0f0;
+    min-width: 340px;
+    height: 48px;
+    border: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    user-select: none;
+    pointer-events: none;
+    margin: 5px 0;
+    box-shadow: 0 0 10px 0 #eee;
+    font-size: 14px;
+  
+    .content {
+      width: 100%;
+      text-align: center;
+    }
+
+    &.success {
+      background-color: #f0f9eb;
+      border-color: #e1f3d8;
+      color: #67C23A;
+    }
+
+    &.error {
+      background-color: #fef0f0;
+      border-color: #fde2e2;
+      color: #F56C6C;
+    }
+
+    &.info {
+      background-color: #f4f4f5;
+      border-color: #e9e9eb;
+      color: #909399;
+    }
+
+    &.warn {
+      background-color: #fdf6ec;
+      border-color: #faecd8;
+      color: #E6A23C;
+    }
+  }
+}
